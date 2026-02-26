@@ -1,3 +1,5 @@
+
+
 // Smooth scroll and scrollspy for navigation
 document.addEventListener('DOMContentLoaded', function () {
 	const navLinks = document.querySelectorAll('.nav-link');
