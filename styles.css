@@ -385,6 +385,20 @@ section:last-child {
 	display: block;
 	box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
+.project-media h4 {
+	margin-top: 20px;
+	margin-bottom: 8px;
+	color: #fff;
+	font-weight: 500;
+	text-decoration: underline;
+}
+.project-media video {
+	width: 100%;
+	max-width: 360px; /* Smaller fixed size for the video */
+	border-radius: 6px;
+	display: block;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
 
 /* Placeholder images (replace with real images in assets/) */
 .img1 { background-image: url('assets/images/seat.png'); }
