@@ -1,0 +1,471 @@
+/* Center experience section content */
+.experience-list {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Timeline styles for experience */
+.experience-row {
+	display: flex;
+	gap: 32px;
+	align-items: flex-start;
+	margin-bottom: 28px;
+}
+
+.timeline-col {
+	width: 120px;
+	position: relative;
+}
+
+.timeline-col:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: rgba(255,255,255,0.06);
+	transform: translateX(-50%);
+}
+
+.timeline-dot {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #1e90ff;
+	border: 3px solid #181a1b;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 6px;
+	z-index: 2;
+}
+
+.timeline-year {
+	text-align: center;
+	margin-top: 8px;
+	font-size: 0.9rem;
+	color: #cfcfcf;
+}
+
+.experience-item {
+	flex: 1;
+}
+
+.experience-item h3 {
+	margin: 0 0 6px 0;
+}
+
+.experience-item .exp-date {
+	display: block;
+	margin: 8px 0 12px 0;
+	color: #cfcfcf;
+}
+
+/* Skills grid */
+.skills-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 28px 48px; 
+}
+
+.skill-category h4 {
+	margin: 0 0 8px 0;
+	color: #f0f8ff;
+}
+
+.skill-list {
+	list-style: disc;
+	margin: 0 0 0 20px;
+	color: #dcdcdc;
+	line-height: 1.6;
+}
+
+
+/* contact list and icons */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+	font-size: 1.1rem;
+	color: #dcdcdc;
+	line-height: 1.6;
+}
+.contact-list .icon {
+    margin-right: 12px;
+    font-size: 1.1rem;
+	color: #80c0ff;
+}
+.contact-list a {
+	color: #80c0ff;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+/* Divider under each experience entry (contained within the text column) */
+.experience-item:after {
+	content: '';
+	display: block;
+	height: 1px;
+	background: rgba(255,255,255,0.06);
+	margin-top: 22px;
+	width: 100%;
+}
+
+/* Remove divider for the last experience-row */
+.experience-list .experience-row:last-child .experience-item:after {
+	display: none;
+}
+/* Portfolio subheading offset */
+.portfolio-subheading {
+	margin-left: 100px;
+	margin-bottom: 12px;
+	font-size: 1.35rem;
+	font-weight: 600;
+}
+.professional-projects {
+	color: #b0e0ff;
+}
+.personal-projects {
+	margin-top: 40px;
+	color: #ffd6a0;
+}
+/* Consistent left padding for main content */
+.section-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 32px;
+}
+/* Section heading offset */
+.section-heading {
+    padding-left: 100px;
+    padding-right: 100px;
+	margin-top: 0;
+	margin-bottom: 24px;
+	font-size: 2.2rem;
+	font-weight: 500;
+	color: #fff;
+}
+/* Dark theme base */
+body {
+	background: #181a1b;
+	color: #f5f5f5;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+header {
+	background: #181a1b;
+	border-bottom: 1px solid #333;
+	padding: 32px 0 0 0;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding: 0 32px;
+}
+
+.logo {
+	font-size: 2.8rem;
+	letter-spacing: 0.25em;
+	font-weight: 400;
+	margin: 0;
+	color: #fff;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 32px;
+	margin: 0;
+	padding: 0;
+}
+
+nav a {
+	color: #bbb;
+	text-decoration: none;
+	font-size: 1.1rem;
+	letter-spacing: 0.1em;
+	transition: color 0.2s, border-bottom 0.2s;
+	border-bottom: 2px solid transparent;
+	padding-bottom: 2px;
+}
+
+nav a.active,
+nav a:hover {
+	color: #fff;
+	border-bottom: 2px solid #fff;
+}
+
+main {
+	padding: 48px 0 0 0;
+}
+
+/* Cover Section */
+.cover-section {
+	min-height: 60vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 48px 0;
+}
+.cover-content {
+	display: flex;
+	align-items: center;
+	gap: 120px;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 1200px;
+	padding: 0 32px;
+}
+.profile-pic {
+	width: 192px;
+	height: 192px;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	box-shadow: 0 2px 16px #000a;
+	background: #222;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+.cover-text {
+	max-width: 800px;
+}
+.cover-text h2 {
+	margin-bottom: 18px;
+}
+.cover-text p {
+	font-size: 1.15rem;
+	color: #e0e0e0;
+	line-height: 1.6;
+}
+/* Section separators */
+section {
+	position: relative;
+	padding-bottom: 80px;
+	margin-bottom: 80px;
+}
+
+section:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1.2px;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+section:last-child {
+	margin-bottom: 0;
+}
+
+.portfolio-grid {
+	display: flex; /* Change to flexbox */
+	flex-direction: column; /* Stack items vertically */
+	gap: 32px; /* Vertical gap between items */
+	max-width: 1200px;
+}
+
+.portfolio-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.portfolio-img {
+	width: 100%;
+	max-width: 350px;
+	aspect-ratio: 1.1/1;
+	background: #23272a;
+	border-radius: 8px;
+	margin-bottom: 18px;
+	box-shadow: 0 4px 24px 0 #000a;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 1px solid #333;
+}
+
+/* Project/accordion styles */
+.project {
+	width: 100%;
+	transition: background-color 0.3s ease;
+	border-radius: 8px;
+}
+
+.project-header {
+	display: flex;
+	gap: 18px;
+	align-items: center;
+	width: 100%;
+	background: transparent;
+	border: none;
+	color: inherit;
+	text-align: left;
+	cursor: pointer;
+	padding: 8px 0;
+}
+
+.project-header:focus {
+	outline: none;
+}
+
+.project-header:hover {
+	outline: 2px solid rgba(128,192,255,0.18);
+	outline-offset: 4px;
+}
+
+.project-header .portfolio-img {
+	max-width: 260px;
+	aspect-ratio: 1.25/1;
+	margin-bottom: 0;
+	transition: all 0.4s ease;
+}
+
+.project-title {
+	font-size: 1.05rem;
+	font-weight: 500;
+}
+
+.project-body {
+	display: none;
+	padding-right: 12px;
+}
+
+.project.open {
+	/* Removed grid-column as it's no longer a grid layout */
+	background-color: #25282b;
+	padding: 0 20px 20px 20px;
+}
+
+.project.open .project-header .portfolio-img {
+	max-width: 800px;
+	aspect-ratio: 1.6/1;
+}
+
+.project.open .project-body {
+	display: block;
+	padding-top: 12px;
+}
+
+.project-desc {
+	color: #dcdcdc;
+	margin: 0 0 8px 0;
+}
+
+.project-skills {
+	margin: 0 0 12px 0;
+	color: #cdd6da;
+}
+
+/* Project media image */
+.project-media {
+	margin-bottom: 12px;
+}
+.project-image {
+	width: 100%;
+	max-width: 480px;
+	border-radius: 6px;
+	display: block;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* Placeholder images (replace with real images in assets/) */
+.img1 { background-image: url('assets/images/seat.png'); }
+.img2 { background-image: url('assets/images/eos_battery.png'); }
+.img3 { background-image: url('assets/images/ample_battery.png'); }
+.img4 { background-image: url('assets/images/robotic_assistant_chef_cad.png'); }
+.img5 { background-image: url('assets/lock.jpg'); }
+.img6 { background-image: url('assets/plaque.jpg'); }
+
+.portfolio-title {
+	font-size: 1.08rem;
+	color: #f5f5f5;
+	text-align: center;
+	margin-top: 0;
+	letter-spacing: 0.03em;
+	font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+	.section-content,
+	.portfolio-grid,
+	.cover-content {
+		padding: 0 24px;
+	}
+}
+
+@media (max-width: 768px) {
+	.section-heading {
+		font-size: 1.8rem;
+	}
+	.cover-content {
+		gap: 40px;
+	}
+	.cover-text p {
+		font-size: 1.05rem;
+	}
+	.container {
+		flex-direction: column;
+		align-items: center;
+		gap: 16px;
+	}
+	nav ul {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 24px;
+	}
+	.experience-row {
+		flex-direction: column;
+		gap: 16px;
+	}
+	.timeline-col {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+	.timeline-col:before {
+		display: none;
+	}
+	.timeline-dot {
+		position: static;
+		transform: none;
+		margin-top: 0;
+	}
+	.timeline-year {
+		margin-top: 0;
+	}
+	.skills-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 480px) {
+	.logo {
+		font-size: 2rem;
+		letter-spacing: 0.15em;
+	}
+	.portfolio-grid {
+		gap: 32px 0;
+	}
+	.portfolio-img {
+		max-width: 100%;
+	}
+}
