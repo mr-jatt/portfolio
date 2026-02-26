@@ -44,25 +44,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		let scrollPos = window.scrollY || window.pageYOffset;
 		let offset = 90; // adjust if header height changes
-		let found = false;
+		
+		// Default to first section (Cover)
+		let currentIdx = 0;
+
 		for (let i = 0; i < sections.length; i++) {
 			const sec = sections[i];
 			if (sec) {
 				const top = sec.offsetTop - offset;
-				const bottom = top + sec.offsetHeight;
-				if (scrollPos >= top && scrollPos < bottom) {
-					navLinks.forEach(l => l.classList.remove('active'));
-					navLinks[i].classList.add('active');
-					found = true;
-					break;
+				if (scrollPos >= top) {
+					currentIdx = i;
 				}
 			}
 		}
-		// If not found (scrolled past last section), highlight last tab
-		if (!found) {
-			navLinks.forEach(l => l.classList.remove('active'));
-			navLinks[navLinks.length - 1].classList.add('active');
+
+		// If at the bottom of the page, highlight the last tab
+		if ((window.innerHeight + Math.round(scrollPos)) >= document.body.offsetHeight) {
+			currentIdx = sections.length - 1;
 		}
+
+		navLinks.forEach(l => l.classList.remove('active'));
+		navLinks[currentIdx].classList.add('active');
 	}
 
 	window.addEventListener('scroll', onScroll);
